@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product
@@ -21,8 +22,8 @@ class Product
 
     #[ORM\Column]
     private ?float $price = null;
-
-    #[ORM\Column(length: 2000, nullable: true)]
+    
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
     public function getId(): ?int
