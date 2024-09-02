@@ -1,12 +1,17 @@
 import React from 'react';
-import Accueil from './components/accueil';
-import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import Accueil from './components/Accueil/Accueil';
+import { Style } from './styles/Styles';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Accueil />
-    </div>
+    <>
+      <Style />
+      <div className="App">
+        <NavBar />
+        <Accueil />
+      </div>
+    </>
   );
 };
 
